@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: 645897841402.dkr.ecr.us-east-1.amazonaws.com/java-eks-devops-project:v1
+          image: 
           ports:
             - containerPort: 8080
           readinessProbe:
