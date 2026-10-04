@@ -32,6 +32,21 @@ module "eks" {
   name               = local.cluster_name
   kubernetes_version = "1.33"
 
+  access_entries = {
+    github_deploy = {
+      principal_arn = aws_iam_role.github_deploy.arn
+      policy_associations = {
+        deploy = {
+          policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSEditPolicy"
+          access_scope = {
+            type       = "namespace"
+            namespaces = ["default"]
+          }
+        }
+      }
+    }
+  }
+
   addons = {
     coredns                = {}
     eks-pod-identity-agent = { before_compute = true }
