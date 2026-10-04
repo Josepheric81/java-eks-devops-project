@@ -22,7 +22,7 @@ jobs:
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          role-to-assume: arn:aws:iam::645897841402:role/java-eks-devops-github-deploy
           aws-region: ${{ env.AWS_REGION }}
 
       - id: ecr
