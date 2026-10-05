@@ -22,7 +22,7 @@ data "aws_iam_policy_document" "github_assume" {
     condition {
       test     = "StringEquals"
       variable = "token.actions.githubusercontent.com:sub"
-      values   = ["repo:Josepheric81/java-eks-devops-project:ref:refs/heads/main"]
+      values   = ["repo:Josepheric81@204498098/java-eks-devops-project@1403813694:ref:refs/heads/main"]
     }
   }
 }
