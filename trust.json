@@ -1,7 +1,0 @@
-{ "Version": "2012-10-17", "Statement": [{
-  "Effect": "Allow",
-  "Principal": { "Federated": "arn:aws:iam::645897841402:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/D2F4AADD8EF98870F0A5BA49DBD3794B" },
-  "Action": "sts:AssumeRoleWithWebIdentity",
-  "Condition": { "StringEquals": {
-    "oidc.eks.us-east-1.amazonaws.com/id/D2F4AADD8EF98870F0A5BA49DBD3794B:aud": "sts.amazonaws.com",
-    "oidc.eks.us-east-1.amazonaws.com/id/D2F4AADD8EF98870F0A5BA49DBD3794B:sub": "system:serviceaccount:argo:argo-workflow" } } }] }
